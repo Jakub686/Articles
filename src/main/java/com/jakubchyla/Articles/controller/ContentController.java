@@ -15,7 +15,7 @@ public class ContentController {
     private ContentRepository contentRepository;
 
     @GetMapping("/getContent")
-    public List<Content> getEmployees() {
+    public List<Content> getContent() {
         return contentRepository.findAll();
     }
 }

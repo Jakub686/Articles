@@ -15,7 +15,7 @@ public class AuthorController {
     private AuthorRepository authorRepository;
 
     @GetMapping("/getAuthor")
-    public List<Author> getEmployees() {
+    public List<Author> getAuthor() {
         return authorRepository.findAll();
     }
 }
