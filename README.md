@@ -9,7 +9,7 @@ To run the application, clone the repository into your local computer, use Java 
 
 ### Database
  
-An article has OneToOne relation with Content, and Author has OneToMany relation with Articles
+An Article has OneToOne relation with Content, and Author has OneToMany relation with Articles.
 
  
 ### Endpoints
