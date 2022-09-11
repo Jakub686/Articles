@@ -1,5 +1,4 @@
 # Articles
-Interview task
 
 ## About
 Application has been written in Java 8 and Spring boot framework with JPA, WEB, MYSQL, and LOMBOK dependencies.
