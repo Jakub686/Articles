@@ -15,30 +15,24 @@ public class ArticleController {
     private ArticleService articleService;
 
     //works
-    @PostMapping("/saveArticle")
+    @PostMapping("/articles")
     public ResponseEntity<String> saveArticle(@RequestBody Article article) {
         articleService.saveArticle(article);
         return ResponseEntity.ok("Data saved");
     }
 
-    @PostMapping("/saveArticles")
-    public ResponseEntity<String> saveArticles(@RequestBody List<Article> articles) {
-        articleService.saveArticlesList(articles);
-        return ResponseEntity.ok("Data saved");
-    }
-
-    @GetMapping("/getArticles")
+    @GetMapping("/articles")
     public List<Article> getArticles() {
         return articleService.findAllArticles();
     }
 
-    @GetMapping("/getArticle/{articleid}")
+    @GetMapping("/articles/{articleid}")
     public Article getById(@PathVariable("articleid") Long articleid) {
         return articleService.getById(articleid);
     }
 
     //works
-    @DeleteMapping("/DeleteArticle/{articleid}")
+    @DeleteMapping("/articles/{articleid}")
     public void deleteArticle(@PathVariable("articleid") Long articleid) {
         articleService.deleteArticle(articleid);
     }
