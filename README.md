@@ -16,5 +16,5 @@ An article has OneToOne relation with Content, and Author has OneToMany relation
  
 Create an Article
 
-![image](https://user-images.githubusercontent.com/80157748/189528486-ce6fb12d-a9d9-4660-b94c-939285d5401c.png)
+![image](https://user-images.githubusercontent.com/80157748/189528517-a9085d0c-12e4-4534-96bb-1eb8ef4112db.png)
 
