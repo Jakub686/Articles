@@ -12,30 +12,30 @@ public class ArticleService {
 
 
     @Autowired
-    private ArticleRepository ArticleRepository;
+    private ArticleRepository articleRepository;
 
     public List<Article> saveArticlesList(List<Article> articleList) {
-        return ArticleRepository.saveAll(articleList);
+        return articleRepository.saveAll(articleList);
     }
 
     public Article saveArticle(Article article) {
-        return ArticleRepository.save(article);
+        return articleRepository.save(article);
     }
 
     public List<Article> findAllArticles() {
-        return ArticleRepository.findAll();
+        return articleRepository.findAll();
     }
 
-    public Article getById(Long emp_id) {
-        return ArticleRepository.findById(emp_id).orElse(null);
+    public Article getById(Long articleid) {
+        return articleRepository.findById(articleid).orElse(null);
     }
 
-    public void deleteEmployee(Long emp_id) {
-        boolean exists = ArticleRepository.existsById(emp_id);
+    public void deleteArticle(Long articleid) {
+        boolean exists = articleRepository.existsById(articleid);
         if (!exists) {
-            throw new IllegalStateException("employee is not exists");
+            throw new IllegalStateException("Article is not exists");
         }
-        ArticleRepository.deleteById(emp_id);
+        articleRepository.deleteById(articleid);
     }
 }
 

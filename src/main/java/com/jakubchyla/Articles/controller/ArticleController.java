@@ -14,12 +14,12 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
+    //works
     @PostMapping("/saveArticle")
     public ResponseEntity<String> saveArticle(@RequestBody Article article) {
         articleService.saveArticle(article);
         return ResponseEntity.ok("Data saved");
     }
-
 
     @PostMapping("/saveArticles")
     public ResponseEntity<String> saveArticles(@RequestBody List<Article> articles) {
@@ -27,21 +27,20 @@ public class ArticleController {
         return ResponseEntity.ok("Data saved");
     }
 
-
     @GetMapping("/getArticles")
     public List<Article> getArticles() {
         return articleService.findAllArticles();
     }
 
-
-    @GetMapping("/getArticle/{article_id}")
-    public Article getById(@PathVariable("article_id") Long article_id) {
-        return articleService.getById(article_id);
+    @GetMapping("/getArticle/{articleid}")
+    public Article getById(@PathVariable("articleid") Long articleid) {
+        return articleService.getById(articleid);
     }
 
-    @DeleteMapping("/DeleteArticle/{article_id}")
-    public void deleteEmployee(@PathVariable("article_id") Long article_id) {
-        articleService.deleteEmployee(article_id);
+    //works
+    @DeleteMapping("/DeleteArticle/{articleid}")
+    public void deleteArticle(@PathVariable("articleid") Long articleid) {
+        articleService.deleteArticle(articleid);
     }
 
 }

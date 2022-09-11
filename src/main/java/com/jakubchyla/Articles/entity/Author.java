@@ -1,9 +1,7 @@
 package com.jakubchyla.Articles.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
@@ -24,5 +22,4 @@ public class Author {
     @ManyToOne
     @JoinColumn(name = "articleid")
     private Article article;
-
 }

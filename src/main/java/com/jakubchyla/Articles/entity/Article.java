@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.transaction.Transactional;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -20,15 +21,14 @@ public class Article {
     @Column(name = "articleid")
     private Long articleid;
     private String magazineName;
-    //private LocalDate date;
-    //private LocalDate published;
+    private Date timestamp = new Date(System.currentTimeMillis());
+    //private Date published;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name ="articleid",referencedColumnName = "articleid")
+    @JoinColumn(name = "articleid", referencedColumnName = "articleid")
     private List<Content> content;
 
-    @OneToMany(targetEntity = Author.class,cascade = CascadeType.ALL)
-    @JoinColumn(name = "articleid",referencedColumnName = "articleid")
+    @OneToMany(targetEntity = Author.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "articleid", referencedColumnName = "articleid")
     private List<Author> author;
-
 }
