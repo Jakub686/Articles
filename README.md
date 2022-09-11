@@ -5,6 +5,12 @@ Application has been written in Java 8 and Spring boot framework with JPA, WEB, 
  
 ### How to run 
 To run the application, clone the repository into your local computer, use Java 8, import maven dependencies, create a database in MySQL Workbench. To configure a database connection use settings from application.properties.
+
+
+### Database
+ 
+An article has OneToOne relation with Content, and Author has OneToMany relation with Articles
+
  
 ### Endpoints
  
