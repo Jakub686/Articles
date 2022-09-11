@@ -8,5 +8,7 @@ To run the application, clone the repository into your local computer, use Java 
  
 ### Endpoints
  
+Create an Article 
+![image](https://user-images.githubusercontent.com/80157748/189525788-76306766-cc7d-4b4d-bc81-fcf2988ceaea.png)
 
 
