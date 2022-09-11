@@ -14,12 +14,13 @@ import javax.transaction.Transactional;
 public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "contentid")
+//    @Column(name = "contentid")
     private Long contentid;
     private String title;
     private String text;
 
-    @ManyToOne
-    @JoinColumn(name = "articleid")
+    @OneToOne
+    @JoinColumn(name = "articleid", referencedColumnName = "articleid")
     private Article article;
+
 }

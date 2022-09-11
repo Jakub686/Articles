@@ -9,30 +9,31 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/articles")
 public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
 
     //works
-    @PostMapping("/articles")
+    @PostMapping("")
     public ResponseEntity<String> saveArticle(@RequestBody Article article) {
         articleService.saveArticle(article);
         return ResponseEntity.ok("Data saved");
     }
 
-    @GetMapping("/articles")
+    @GetMapping("")
     public List<Article> getArticles() {
         return articleService.findAllArticles();
     }
 
-    @GetMapping("/articles/{articleid}")
+    @GetMapping("/{articleid}")
     public Article getById(@PathVariable("articleid") Long articleid) {
         return articleService.getById(articleid);
     }
 
     //works
-    @DeleteMapping("/articles/{articleid}")
+    @DeleteMapping("/{articleid}")
     public void deleteArticle(@PathVariable("articleid") Long articleid) {
         articleService.deleteArticle(articleid);
     }
