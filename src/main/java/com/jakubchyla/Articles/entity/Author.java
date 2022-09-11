@@ -1,7 +1,9 @@
 package com.jakubchyla.Articles.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
@@ -14,12 +16,13 @@ import javax.transaction.Transactional;
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "author_id")
-    private Long authorId;
+    @Column(name = "authorid")
+    private Long authorid;
     private String name;
     private String surname;
 
     @ManyToOne
-    @JoinColumn(name = "fk_article_id")
+    @JoinColumn(name = "articleid")
     private Article article;
+
 }

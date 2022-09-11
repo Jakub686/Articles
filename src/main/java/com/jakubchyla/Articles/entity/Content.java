@@ -1,7 +1,9 @@
 package com.jakubchyla.Articles.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
@@ -14,12 +16,13 @@ import javax.transaction.Transactional;
 public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "content_id")
-    private Long contentId;
+    @Column(name = "contentid")
+    private Long contentid;
     private String title;
     private String text;
 
     @ManyToOne
-    @JoinColumn(name = "fk_article_id")
+    @JoinColumn(name = "articleid")
     private Article article;
+
 }

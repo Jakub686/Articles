@@ -13,24 +13,22 @@ import java.util.List;
 @Transactional
 @Data
 @NoArgsConstructor
-@Table(name = "article_details")
+@Table(name = "article")
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "article_id")
-    private Long article_id;
+    @Column(name = "articleid")
+    private Long articleid;
     private String magazineName;
-    //private date
+    //private LocalDate date;
     //private LocalDate published;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_article_id",referencedColumnName = "article_id")
+    @JoinColumn(name ="articleid",referencedColumnName = "articleid")
     private List<Content> content;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_article_id",referencedColumnName = "article_id")
+    @OneToMany(targetEntity = Author.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "articleid",referencedColumnName = "articleid")
     private List<Author> author;
-
-
 
 }
