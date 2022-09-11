@@ -18,3 +18,8 @@ Create an Article
 
 ![image](https://user-images.githubusercontent.com/80157748/189528517-a9085d0c-12e4-4534-96bb-1eb8ef4112db.png)
 
+Delete an Article by ID
+
+![image](https://user-images.githubusercontent.com/80157748/189528551-766cbc85-9b63-4734-a4c1-b9f1b8aa7eba.png)
+
+
