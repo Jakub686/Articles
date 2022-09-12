@@ -32,10 +32,11 @@ result
 
 Create an Article 3
 
-
+![image](https://user-images.githubusercontent.com/80157748/189675038-721f5019-963c-4dfa-bdfe-72ddac30f90a.png)
 
 result
 
+![image](https://user-images.githubusercontent.com/80157748/189675100-5f40f47a-5647-4922-83fe-2141a20acd77.png)
 
 
 
