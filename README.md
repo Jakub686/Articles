@@ -14,9 +14,14 @@ An Article has OneToOne relation with Content, and Author has OneToMany relation
  
 ### Endpoints
  
-Create an Article
+Create an Article 1
 
-![image](https://user-images.githubusercontent.com/80157748/189528517-a9085d0c-12e4-4534-96bb-1eb8ef4112db.png)
+![image](https://user-images.githubusercontent.com/80157748/189674069-2f0c8e6f-5639-4b1c-8fa4-c20646818394.png)
+
+result
+
+![image](https://user-images.githubusercontent.com/80157748/189674313-218ffac5-4ca9-4977-b9b3-dd418268a3f6.png)
+
 
 Delete an Article by ID
 
