@@ -22,20 +22,22 @@ public class ArticleController {
         return ResponseEntity.ok("Data saved");
     }
 
+    //works
     @GetMapping("")
     public List<Article> getArticles() {
         return articleService.findAllArticles();
     }
 
-    @GetMapping("/{articleid}")
-    public Article getById(@PathVariable("articleid") Long articleid) {
-        return articleService.getById(articleid);
+    //works
+    @GetMapping("/{id}")
+    public Article getById(@PathVariable("id") Long id) {
+        return articleService.getById(id);
     }
 
     //works
-    @DeleteMapping("/{articleid}")
-    public void deleteArticle(@PathVariable("articleid") Long articleid) {
-        articleService.deleteArticle(articleid);
+    @DeleteMapping("/{id}")
+    public void deleteArticle(@PathVariable("id") Long id) {
+        articleService.deleteArticle(id);
     }
 
 }

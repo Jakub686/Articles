@@ -16,15 +16,17 @@ import java.util.List;
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "articleid")
-    private Long articleid;
+    @Column(name = "id")
+    private Long id;
+    private String title;
+    private String content;
+    //pricate Date date;
     private String magazineName;
+    private String name;
+    private String surname;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp = new Date(System.currentTimeMillis());
     //private Date published;
 
-    @OneToMany(targetEntity = Author.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "articleid", referencedColumnName = "articleid")
-    private List<Author> author;
 }

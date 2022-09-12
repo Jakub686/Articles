@@ -26,16 +26,16 @@ public class ArticleService {
         return articleRepository.findAll();
     }
 
-    public Article getById(Long articleid) {
-        return articleRepository.findById(articleid).orElse(null);
+    public Article getById(Long id) {
+        return articleRepository.findById(id).orElse(null);
     }
 
-    public void deleteArticle(Long articleid) {
-        boolean exists = articleRepository.existsById(articleid);
+    public void deleteArticle(Long id) {
+        boolean exists = articleRepository.existsById(id);
         if (!exists) {
             throw new IllegalStateException("Article is not exists");
         }
-        articleRepository.deleteById(articleid);
+        articleRepository.deleteById(id);
     }
 }
 
