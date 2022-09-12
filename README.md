@@ -38,10 +38,27 @@ result
 
 ![image](https://user-images.githubusercontent.com/80157748/189675100-5f40f47a-5647-4922-83fe-2141a20acd77.png)
 
+Find all Articles
 
+![image](https://user-images.githubusercontent.com/80157748/189675498-df9ac1f5-80ec-44a4-84e3-3d840bd69214.png)
 
-Delete an Article by ID
+Find an Article by Id
 
-![image](https://user-images.githubusercontent.com/80157748/189528551-766cbc85-9b63-4734-a4c1-b9f1b8aa7eba.png)
+![image](https://user-images.githubusercontent.com/80157748/189675723-d925d4b4-4fa9-4d5a-98b0-123772f38abe.png)
 
+Put An Article by Id
+
+![image](https://user-images.githubusercontent.com/80157748/189676014-ee4aa59e-2ae5-45f0-a974-7f5afe2bcda3.png)
+
+result
+
+![image](https://user-images.githubusercontent.com/80157748/189676097-5bb62388-3ed7-4d05-80b0-0b7f2c52c6ee.png)
+
+Delete an Article by Id
+
+![image](https://user-images.githubusercontent.com/80157748/189676224-2cda819c-f3ab-48bd-be5b-e8a23c03f301.png)
+
+result
+
+![image](https://user-images.githubusercontent.com/80157748/189676286-98364c34-3c42-451a-ac6c-705d7a9bac0e.png)
 
