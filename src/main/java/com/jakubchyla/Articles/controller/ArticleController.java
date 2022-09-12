@@ -40,4 +40,10 @@ public class ArticleController {
         articleService.deleteArticle(id);
     }
 
+    //works
+    @PutMapping("")
+    public Article updateArticle(@RequestBody Article article){
+        return articleService.updateArticle(article);
+    }
+
 }

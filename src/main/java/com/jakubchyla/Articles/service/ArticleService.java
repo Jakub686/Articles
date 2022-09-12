@@ -37,5 +37,16 @@ public class ArticleService {
         }
         articleRepository.deleteById(id);
     }
+
+    public Article updateArticle(Article article){
+        Article existingArticle = articleRepository.findById(article.getId()).orElse(null);
+        existingArticle.setTitle(article.getTitle());
+        existingArticle.setContent(article.getContent());
+        existingArticle.setMagazineName(article.getMagazineName());
+        existingArticle.setName(article.getName());
+        existingArticle.setSurname(article.getSurname());
+        return articleRepository.save(existingArticle);
+    }
+
 }
 
