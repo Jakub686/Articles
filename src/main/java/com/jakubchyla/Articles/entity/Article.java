@@ -1,12 +1,12 @@
 package com.jakubchyla.Articles.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Transactional
@@ -20,13 +20,13 @@ public class Article {
     private Long id;
     private String title;
     private String content;
-    //pricate Date date;
+
+    @JsonFormat(pattern="yyyy-MM-dd")
+    private Date published;
     private String magazineName;
     private String name;
     private String surname;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp = new Date(System.currentTimeMillis());
-    //private Date published;
-
 }

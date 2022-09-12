@@ -10,7 +10,6 @@ import java.util.List;
 @Service
 public class ArticleService {
 
-
     @Autowired
     private ArticleRepository articleRepository;
 
@@ -38,7 +37,7 @@ public class ArticleService {
         articleRepository.deleteById(id);
     }
 
-    public Article updateArticle(Article article){
+    public Article updateArticle(Article article) {
         Article existingArticle = articleRepository.findById(article.getId()).orElse(null);
         existingArticle.setTitle(article.getTitle());
         existingArticle.setContent(article.getContent());

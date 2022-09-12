@@ -45,5 +45,4 @@ public class ArticleController {
     public Article updateArticle(@RequestBody Article article){
         return articleService.updateArticle(article);
     }
-
 }
