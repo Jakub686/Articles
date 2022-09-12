@@ -41,7 +41,7 @@ Find an Article by Id
 
 ![image](https://user-images.githubusercontent.com/80157748/189675723-d925d4b4-4fa9-4d5a-98b0-123772f38abe.png)
 
-Put An Article by Id
+Put an Article by Id
 
 ![image](https://user-images.githubusercontent.com/80157748/189676014-ee4aa59e-2ae5-45f0-a974-7f5afe2bcda3.png)
 
