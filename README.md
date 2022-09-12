@@ -13,7 +13,7 @@ Create an Article 1
 
 ![image](https://user-images.githubusercontent.com/80157748/189674069-2f0c8e6f-5639-4b1c-8fa4-c20646818394.png)
 
-result
+Result
 
 ![image](https://user-images.githubusercontent.com/80157748/189674313-218ffac5-4ca9-4977-b9b3-dd418268a3f6.png)
 
@@ -21,7 +21,7 @@ Create an Article 2
 
 ![image](https://user-images.githubusercontent.com/80157748/189674563-064094c9-b7a0-4dbb-a701-693e815012de.png)
 
-result
+Result
 
 ![image](https://user-images.githubusercontent.com/80157748/189674747-abaf94ab-b6c1-4d6e-a972-c253a23e6321.png)
 
@@ -29,7 +29,7 @@ Create an Article 3
 
 ![image](https://user-images.githubusercontent.com/80157748/189675038-721f5019-963c-4dfa-bdfe-72ddac30f90a.png)
 
-result
+Result
 
 ![image](https://user-images.githubusercontent.com/80157748/189675100-5f40f47a-5647-4922-83fe-2141a20acd77.png)
 
@@ -45,7 +45,7 @@ Put An Article by Id
 
 ![image](https://user-images.githubusercontent.com/80157748/189676014-ee4aa59e-2ae5-45f0-a974-7f5afe2bcda3.png)
 
-result
+Result
 
 ![image](https://user-images.githubusercontent.com/80157748/189676097-5bb62388-3ed7-4d05-80b0-0b7f2c52c6ee.png)
 
@@ -53,7 +53,7 @@ Delete an Article by Id
 
 ![image](https://user-images.githubusercontent.com/80157748/189676224-2cda819c-f3ab-48bd-be5b-e8a23c03f301.png)
 
-result
+Result
 
 ![image](https://user-images.githubusercontent.com/80157748/189676286-98364c34-3c42-451a-ac6c-705d7a9bac0e.png)
 
