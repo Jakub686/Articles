@@ -22,6 +22,14 @@ result
 
 ![image](https://user-images.githubusercontent.com/80157748/189674313-218ffac5-4ca9-4977-b9b3-dd418268a3f6.png)
 
+Create an Article 2
+
+![image](https://user-images.githubusercontent.com/80157748/189674563-064094c9-b7a0-4dbb-a701-693e815012de.png)
+
+result
+
+
+
 
 Delete an Article by ID
 
