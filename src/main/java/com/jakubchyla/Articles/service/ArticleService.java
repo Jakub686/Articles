@@ -4,7 +4,6 @@ import com.jakubchyla.Articles.entity.Article;
 import com.jakubchyla.Articles.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -47,5 +46,8 @@ public class ArticleService {
         return articleRepository.save(existingArticle);
     }
 
+    public List<Article> findByTitle(String content) {
+        return articleRepository.findByTitle(content);
+    }
 }
 

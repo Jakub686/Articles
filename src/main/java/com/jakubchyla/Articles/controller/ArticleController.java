@@ -35,6 +35,12 @@ public class ArticleController {
     }
 
     //works
+    @GetMapping("/search")
+    public List<Article> search(@RequestParam String title) {
+        return articleService.findByTitle(title);
+    }
+
+    //works
     @DeleteMapping("/{id}")
     public void deleteArticle(@PathVariable("id") Long id) {
         articleService.deleteArticle(id);
