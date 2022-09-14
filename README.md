@@ -57,3 +57,8 @@ result
 
 ![image](https://user-images.githubusercontent.com/80157748/189676286-98364c34-3c42-451a-ac6c-705d7a9bac0e.png)
 
+Search by title
+
+![image](https://user-images.githubusercontent.com/80157748/189978951-d202cfdd-a583-4c2f-b252-8e87bc03b872.png)
+
+
