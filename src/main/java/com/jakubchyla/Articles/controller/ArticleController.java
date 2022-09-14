@@ -3,8 +3,10 @@ package com.jakubchyla.Articles.controller;
 import com.jakubchyla.Articles.entity.Article;
 import com.jakubchyla.Articles.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -17,27 +19,39 @@ public class ArticleController {
 
     //works
     @PostMapping("")
-    public ResponseEntity<String> saveArticle(@RequestBody Article article) {
+    public ResponseEntity<Article> saveArticle(@RequestBody Article article) {
         articleService.saveArticle(article);
-        return ResponseEntity.ok("Data saved");
+        return new ResponseEntity<>(article, HttpStatus.OK);
     }
 
     //works
     @GetMapping("")
     public List<Article> getArticles() {
-        return articleService.findAllArticles();
+        if (articleService.findAllArticles() == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        } else {
+            return articleService.findAllArticles();
+        }
     }
 
     //works
     @GetMapping("/{id}")
     public Article getById(@PathVariable("id") Long id) {
-        return articleService.getById(id);
+        if (articleService.getById(id) == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        } else {
+            return articleService.getById(id);
+        }
     }
 
     //works
     @GetMapping("/search")
     public List<Article> search(@RequestParam String title) {
-        return articleService.findByTitle(title);
+        if (articleService.findByTitle(title) == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        } else {
+            return articleService.findByTitle(title);
+        }
     }
 
     //works
