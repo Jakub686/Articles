@@ -46,7 +46,7 @@ public class ArticleController {
 
     //works
     @GetMapping("/search")
-    public List<Article> search(@RequestParam String title) {
+    public List<Article> findByTitle(@RequestParam String title) {
         if (articleService.findByTitle(title) == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } else {

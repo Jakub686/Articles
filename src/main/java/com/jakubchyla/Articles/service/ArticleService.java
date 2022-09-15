@@ -12,10 +12,6 @@ public class ArticleService {
     @Autowired
     private ArticleRepository articleRepository;
 
-    public List<Article> saveArticlesList(List<Article> articleList) {
-        return articleRepository.saveAll(articleList);
-    }
-
     public Article saveArticle(Article article) {
         return articleRepository.save(article);
     }
@@ -46,8 +42,8 @@ public class ArticleService {
         return articleRepository.save(existingArticle);
     }
 
-    public List<Article> findByTitle(String content) {
-        return articleRepository.findByTitle(content);
+    public List<Article> findByTitle(String title) {
+        return articleRepository.findByTitle(title);
     }
 }
 

@@ -9,14 +9,11 @@ import javax.transaction.Transactional;
 import java.util.Date;
 
 @Entity
-@Transactional
 @Data
 @NoArgsConstructor
-@Table(name = "article")
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
     private Long id;
     private String title;
     private String content;
