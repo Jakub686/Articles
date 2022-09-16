@@ -8,7 +8,6 @@ To run the application, clone the repository into your local computer, use Java 
 
  
 ### Endpoints
-### fff
  
 Create an Article 1
 
