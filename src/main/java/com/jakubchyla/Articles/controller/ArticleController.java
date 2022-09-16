@@ -18,10 +18,16 @@ public class ArticleController {
     private ArticleService articleService;
 
     //works
+//    @PostMapping("")
+//    public ResponseEntity<Article> saveArticle(@RequestBody Article article) {
+//        articleService.saveArticle(article);
+//        return new ResponseEntity<>(article, HttpStatus.OK);
+//    }
+
     @PostMapping("")
     public ResponseEntity<Article> saveArticle(@RequestBody Article article) {
-        articleService.saveArticle(article);
-        return new ResponseEntity<>(article, HttpStatus.OK);
+        Article newArticle = articleService.saveArticle(article);
+        return new ResponseEntity<>(newArticle, HttpStatus.CREATED);
     }
 
     //works
