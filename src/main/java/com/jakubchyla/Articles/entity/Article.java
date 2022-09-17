@@ -25,5 +25,5 @@ public class Article {
     private String surname;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private Date timestamp = new Date(System.currentTimeMillis());
+    final private Date timestamp = new Date(System.currentTimeMillis());
 }

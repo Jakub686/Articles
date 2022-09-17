@@ -17,59 +17,48 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
-    //works
-//    @PostMapping("")
-//    public ResponseEntity<Article> saveArticle(@RequestBody Article article) {
-//        articleService.saveArticle(article);
-//        return new ResponseEntity<>(article, HttpStatus.OK);
-//    }
-
     @PostMapping("")
     public ResponseEntity<Article> saveArticle(@RequestBody Article article) {
         Article newArticle = articleService.saveArticle(article);
         return new ResponseEntity<>(newArticle, HttpStatus.CREATED);
     }
 
-    //works
     @GetMapping("")
-    public List<Article> getArticles() {
-        if (articleService.findAllArticles() == null) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        } else {
-            return articleService.findAllArticles();
-        }
+    public ResponseEntity<List<Article>> getArticles() {
+        List<Article> articles = articleService.findAllArticles();
+        return new ResponseEntity<>(articles, HttpStatus.OK);
     }
 
-    //works
     @GetMapping("/{id}")
-    public Article getById(@PathVariable("id") Long id) {
+    public ResponseEntity<Article> getById(@PathVariable("id") Long id) {
         if (articleService.getById(id) == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } else {
-            return articleService.getById(id);
+            return new ResponseEntity<>(articleService.getById(id), HttpStatus.OK);
         }
     }
 
-    //works
     @GetMapping("/search")
-    public List<Article> findByTitle(@RequestParam String title) {
+    public ResponseEntity<List<Article>> findByTitle(@RequestParam String title) {
         if (articleService.findByTitle(title) == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } else {
-            return articleService.findByTitle(title);
+            return new ResponseEntity<>(articleService.findByTitle(title), HttpStatus.OK);
         }
     }
 
-    //works
     @DeleteMapping("/{id}")
     public ResponseEntity<Long> deleteArticle(@PathVariable("id") Long id) {
-        articleService.deleteArticle(id);
-        return new ResponseEntity<>(id, HttpStatus.OK);
+        if (articleService.getById(id) == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        } else {
+            articleService.deleteArticle(id);
+            return new ResponseEntity<>(id, HttpStatus.OK);
+        }
     }
 
-    //works
     @PutMapping("")
-    public Article updateArticle(@RequestBody Article article){
-        return articleService.updateArticle(article);
+    public ResponseEntity<Article> updateArticle(@RequestBody Article article) {
+        return new ResponseEntity<>(articleService.updateArticle(article), HttpStatus.OK);
     }
 }
