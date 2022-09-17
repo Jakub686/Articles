@@ -11,7 +11,7 @@ To run the application, clone the repository into your local computer, use Java 
  
 ### Create an Article 1
 
-url: http://localhost:8080/articles
+POST url: http://localhost:8080/articles
 
 json: {
 "title": "Polskie samochody",
@@ -24,7 +24,7 @@ json: {
 
 ### Create an Article 2
 
-url: http://localhost:8080/articles
+POST url: http://localhost:8080/articles
 
 json: {
 "title": "Motocylke wojskowe",
@@ -37,7 +37,7 @@ json: {
 
 ### Create an Article 3
 
-url: http://localhost:8080/articles
+POST url: http://localhost:8080/articles
 
 json: {
 "title": "Wloska kuchnia",
@@ -48,32 +48,33 @@ json: {
 "surname":"nazwisko autora 3"
 }    
 
-Find all Articles
+### Find all Articles
 
-![image](https://user-images.githubusercontent.com/80157748/189675498-df9ac1f5-80ec-44a4-84e3-3d840bd69214.png)
+GET url: http://localhost:8080/articles
 
-Find an Article by Id
+### Find an Article by Id
 
-![image](https://user-images.githubusercontent.com/80157748/189675723-d925d4b4-4fa9-4d5a-98b0-123772f38abe.png)
+GET url: http://localhost:8080/articles/{id}
 
-Put An Article by Id
+### Put An Article by Id
 
-![image](https://user-images.githubusercontent.com/80157748/189676014-ee4aa59e-2ae5-45f0-a974-7f5afe2bcda3.png)
+PUT url: http://localhost:8080/articles
 
-result
+json: {
+"id":"5",
+"title": "zmiana",
+"content": "zmiana",
+"magazineName":"zmiana",
+"name":"zmiana",
+"surname":"zmiana"
+}     
 
-![image](https://user-images.githubusercontent.com/80157748/189676097-5bb62388-3ed7-4d05-80b0-0b7f2c52c6ee.png)
+### Delete an Article by Id
 
-Delete an Article by Id
+DELETE url: http://localhost:8080/articles/{id}
 
-![image](https://user-images.githubusercontent.com/80157748/189676224-2cda819c-f3ab-48bd-be5b-e8a23c03f301.png)
+### Search by title
 
-result
-
-![image](https://user-images.githubusercontent.com/80157748/189676286-98364c34-3c42-451a-ac6c-705d7a9bac0e.png)
-
-Search by title
-
-![image](https://user-images.githubusercontent.com/80157748/189978951-d202cfdd-a583-4c2f-b252-8e87bc03b872.png)
+GET url: http://localhost:8080/articles/search?title=
 
 
