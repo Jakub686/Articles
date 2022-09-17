@@ -1,15 +1,15 @@
 # Articles
 
-### About
+## About
 Application has been written in Java 8 and Spring boot framework with JPA, WEB, MYSQL, and LOMBOK Maven dependencies.
  
-### How to run 
+## How to run 
 To run the application, clone the repository into your local computer, use Java 8, import maven dependencies, create a database in MySQL Workbench. To configure a database connection use settings from application.properties.
 
  
-### Endpoints
+## Endpoints
  
-Create an Article 1
+### Create an Article 1
 
 url: http://localhost:8080/articles
 
@@ -22,7 +22,7 @@ json: {
 "surname":"Kowalski"
 }    
 
-Create an Article 2
+### Create an Article 2
 
 url: http://localhost:8080/articles
 
@@ -35,7 +35,7 @@ json: {
 "surname":"Nowak"
 }  
 
-Create an Article 3
+### Create an Article 3
 
 url: http://localhost:8080/articles
 
