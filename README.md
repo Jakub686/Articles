@@ -24,19 +24,29 @@ json: {
 
 Create an Article 2
 
-![image](https://user-images.githubusercontent.com/80157748/189674563-064094c9-b7a0-4dbb-a701-693e815012de.png)
+url: http://localhost:8080/articles
 
-result
-
-![image](https://user-images.githubusercontent.com/80157748/189674747-abaf94ab-b6c1-4d6e-a972-c253a23e6321.png)
+json: {
+"title": "Motocylke wojskowe",
+"content": "Czasy powszechnego wykorzystania motocykli w zadaniach bojowych, to już przeszłość i nie wydaje się, by mogło się to zmienić.",
+"published": "2002-10-05",
+"magazineName":"Magazyn wojenny",
+"name":"Ela",
+"surname":"Nowak"
+}  
 
 Create an Article 3
 
-![image](https://user-images.githubusercontent.com/80157748/189675038-721f5019-963c-4dfa-bdfe-72ddac30f90a.png)
+url: http://localhost:8080/articles
 
-result
-
-![image](https://user-images.githubusercontent.com/80157748/189675100-5f40f47a-5647-4922-83fe-2141a20acd77.png)
+json: {
+"title": "Wloska kuchnia",
+"content": "jedna z dwóch najbardziej popularnych kuchni europejskich obok kuchni francuskiej.",
+"published": "2005-07-08",
+"magazineName":"100 Przepisow",
+"name":"Andrzej",
+"surname":"nazwisko autora 3"
+}    
 
 Find all Articles
 
