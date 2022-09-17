@@ -11,11 +11,16 @@ To run the application, clone the repository into your local computer, use Java 
  
 Create an Article 1
 
-![image](https://user-images.githubusercontent.com/80157748/189674069-2f0c8e6f-5639-4b1c-8fa4-c20646818394.png)
+http://localhost:8080/articles
 
-result
-
-![image](https://user-images.githubusercontent.com/80157748/189674313-218ffac5-4ca9-4977-b9b3-dd418268a3f6.png)
+{
+"title": "Polskie samochody",
+"content": "Nowa Warszawa, nowa Syrenka, pojazd o nazwie Triggo, czy mały, elektryczny dostawczak z Polski To tylko niektóre z przykładów aut, które chcą zbudować lub już konstruują producenci",
+"published": "2022-03-04",
+"magazineName":"Autoswiat",
+"name":"Jan",
+"surname":"Kowalski"
+}    
 
 Create an Article 2
 
