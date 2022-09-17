@@ -11,9 +11,9 @@ To run the application, clone the repository into your local computer, use Java 
  
 Create an Article 1
 
-http://localhost:8080/articles
+url: http://localhost:8080/articles
 
-{
+json: {
 "title": "Polskie samochody",
 "content": "Nowa Warszawa, nowa Syrenka, pojazd o nazwie Triggo, czy mały, elektryczny dostawczak z Polski To tylko niektóre z przykładów aut, które chcą zbudować lub już konstruują producenci",
 "published": "2022-03-04",
