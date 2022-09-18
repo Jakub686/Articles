@@ -41,7 +41,7 @@ POST url: http://localhost:8080/articles
 
 json: {
 "title": "Wloska kuchnia",
-"content": "jedna z dwóch najbardziej popularnych kuchni europejskich obok kuchni francuskiej.",
+"content": "Jedna z dwóch najbardziej popularnych kuchni europejskich obok kuchni francuskiej.",
 "published": "2005-07-08",
 "magazineName":"100 Przepisow",
 "name":"Andrzej",
