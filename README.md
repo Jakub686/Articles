@@ -73,7 +73,7 @@ json: {
 
 DELETE url: http://localhost:8080/articles/{id}
 
-### Search by TEXT in two columns
+### Search by TEXT in column title and column content
 
 GET url: http://localhost:8080/articles/search?title=TEXT&content=TEXT
 
