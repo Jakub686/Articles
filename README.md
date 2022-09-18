@@ -45,7 +45,7 @@ json: {
 "published": "2005-07-08",
 "magazineName":"100 Przepisow",
 "name":"Andrzej",
-"surname":"nazwisko autora 3"
+"surname":"Duda"
 }    
 
 ### Find all Articles
