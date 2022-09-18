@@ -56,7 +56,7 @@ GET url: http://localhost:8080/articles
 
 GET url: http://localhost:8080/articles/{id}
 
-### Put An Article by Id
+### Put an Article by Id
 
 PUT url: http://localhost:8080/articles
 
