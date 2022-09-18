@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/articles")
@@ -39,11 +40,11 @@ public class ArticleController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<Article>> findByTitle(@RequestParam String title) {
-        if (articleService.findByTitle(title) == null) {
+    public ResponseEntity<List<Article>> findByTitleContent(@RequestParam String title,@RequestParam String content) {
+        if (articleService.findByTitleContent(title,content) == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } else {
-            return new ResponseEntity<>(articleService.findByTitle(title), HttpStatus.OK);
+            return new ResponseEntity<>(articleService.findByTitleContent(title, content), HttpStatus.OK);
         }
     }
 

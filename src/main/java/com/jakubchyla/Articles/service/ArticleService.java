@@ -45,8 +45,8 @@ public class ArticleService {
         return articleRepository.save(existingArticle);
     }
 
-    public List<Article> findByTitle(String title) {
-        return articleRepository.findByTitle(title);
+    public List<Article> findByTitleContent(String title, String content) {
+        return articleRepository.findByTitleContent(title,content);
     }
 }
 
