@@ -1,6 +1,7 @@
 # Articles
 
 ## About
+User can do CRUD operations, and search articles by keyword in title and content database columns using a custom query.
 Application has been written in Java 8 and Spring boot framework with JPA, WEB, MYSQL, and LOMBOK Maven dependencies.
  
 ## How to run 
@@ -41,11 +42,11 @@ POST url: http://localhost:8080/articles
 
 json: {
 "title": "Wloska kuchnia",
-"content": "jedna z dwóch najbardziej popularnych kuchni europejskich obok kuchni francuskiej.",
+"content": "Jedna z dwóch najbardziej popularnych kuchni europejskich obok kuchni francuskiej.",
 "published": "2005-07-08",
 "magazineName":"100 Przepisow",
 "name":"Andrzej",
-"surname":"nazwisko autora 3"
+"surname":"Duda"
 }    
 
 ### Find all Articles
@@ -56,7 +57,7 @@ GET url: http://localhost:8080/articles
 
 GET url: http://localhost:8080/articles/{id}
 
-### Put An Article by Id
+### Put an Article by Id
 
 PUT url: http://localhost:8080/articles
 
@@ -73,8 +74,8 @@ json: {
 
 DELETE url: http://localhost:8080/articles/{id}
 
-### Search by title
+### Search by TEXT in column title and column content
 
-GET url: http://localhost:8080/articles/search?title=
+GET url: http://localhost:8080/articles/search?title=TEXT&content=TEXT
 
 
