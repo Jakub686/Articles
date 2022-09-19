@@ -1,7 +1,7 @@
 # Articles
 
 ## About
-User can do CRUD operations, and search articles by keyword in title and content database columns using a custom query.
+User can do CRUD operations, also search articles by keyword in title and in content using a custom query.
 Application has been written in Java 8 and Spring boot framework with JPA, WEB, MYSQL, and LOMBOK Maven dependencies.
  
 ## How to run 
