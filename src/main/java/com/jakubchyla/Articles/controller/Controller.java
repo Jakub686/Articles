@@ -2,6 +2,7 @@ package com.jakubchyla.Articles.controller;
 
 import com.jakubchyla.Articles.entity.Article;
 import com.jakubchyla.Articles.service.ArticleService;
+import com.jakubchyla.Articles.service.AttachmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,10 +13,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/articles")
-public class ArticleController {
+public class Controller {
 
     @Autowired
     private ArticleService articleService;
+
+    @Autowired
+    private AttachmentService attachmentService;
 
     @PostMapping("")
     public ResponseEntity<Article> saveArticle(@RequestBody Article article) {
@@ -60,5 +64,15 @@ public class ArticleController {
     @PutMapping("")
     public ResponseEntity<Article> updateArticle(@RequestBody Article article) {
         return new ResponseEntity<>(articleService.updateArticle(article), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/attachment/{id}")
+    public ResponseEntity<Long> deleteAttachment(@PathVariable("id") Long id) {
+        if (attachmentService.getById(id) == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        } else {
+            attachmentService.deleteAttachment(id);
+            return new ResponseEntity<>(id, HttpStatus.OK);
+        }
     }
 }

@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.transaction.Transactional;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -26,4 +26,8 @@ public class Article {
 
     @Temporal(TemporalType.TIMESTAMP)
     final private Date timestamp = new Date(System.currentTimeMillis());
+
+    @OneToMany(targetEntity = Attachment.class,cascade = CascadeType.ALL)
+    @JoinColumn(name ="article_id",referencedColumnName = "id")
+    private List<Attachment> attachments;
 }
