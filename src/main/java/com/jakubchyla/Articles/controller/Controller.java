@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,7 +23,7 @@ public class Controller {
     private AttachmentService attachmentService;
 
     @PostMapping("")
-    public ResponseEntity<Article> saveArticle(@RequestBody Article article) {
+    public ResponseEntity<Article> saveArticle(@Valid @RequestBody Article article) {
         Article newArticle = articleService.saveArticle(article);
         return new ResponseEntity<>(newArticle, HttpStatus.CREATED);
     }
