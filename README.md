@@ -5,7 +5,7 @@ User can do CRUD operations, also search articles by keyword in title and in con
 Application has been written in Java 8 and Spring boot framework with JPA, WEB, POSTGRESQL, VALIDATION and LOMBOK Maven dependencies.
  
 ## How to run 
-To run the application, clone the repository into your local computer, use Java 8, import maven dependencies, create a database in PostgreSQL. To configure a database connection use settings from application.properties.
+To run the application use heroku urls or clone the repository into your local computer, use Java 8, import maven dependencies, create a database in PostgreSQL. To configure a database connection use settings from application.properties.
 
 
 
@@ -21,8 +21,15 @@ json: {
 "published": "2022-03-04",
 "magazineName":"Autoswiat",
 "name":"Jan",
-"surname":"Kowalski"
+"surname":"Kowalski",
+"attachments":[{
+    "id":3,
+    "title": "zalacznik tytul",
+    "content": "zalacznik zawartosc"
+}
+]
 }    
+    
 
 ### Create an Article 2
 
