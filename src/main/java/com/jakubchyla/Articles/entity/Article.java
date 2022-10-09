@@ -34,6 +34,7 @@ public class Article {
     private String name;
     private String surname;
 
+    //    @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     final private Date timestamp = new Date(System.currentTimeMillis());
 
