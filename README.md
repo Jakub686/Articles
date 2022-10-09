@@ -13,7 +13,7 @@ To run the application use heroku urls or clone the repository into your local c
  
 ### Create an Article 1
 
-POST url: http://localhost:8080/articles
+POST url: https://articles-jc.herokuapp.com/articles , http://localhost:8080/articles
 
 json: {
 "title": "Polskie samochody",
