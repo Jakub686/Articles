@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface ArticleRepository extends JpaRepository<Article, Long> {
 
-    @Query("SELECT * FROM Article WHERE title LIKE %?1% OR content LIKE %?2%")
+    @Query("SELECT s FROM Article s WHERE title LIKE %?1% OR content LIKE %?2%")
     List<Article> findByTitleContent(String title, String content);
 }
