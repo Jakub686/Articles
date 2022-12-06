@@ -35,7 +35,7 @@ public class Controller {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Article> getById(@PathVariable("id") Long id) {
+    public ResponseEntity<Article> getById(@PathVariable Long id) {
         if (articleService.getById(id) == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } else {
